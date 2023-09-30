@@ -10,6 +10,7 @@ import java.util.List;
 public interface LoginDao {
 	/**
 	 * アカウント取得
+	 *
 	 * @param id ユーザID
 	 * @return アカウントリスト
 	 */

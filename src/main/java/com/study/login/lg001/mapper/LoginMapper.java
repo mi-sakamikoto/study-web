@@ -15,5 +15,5 @@ public interface LoginMapper {
 	 * @param id ユーザID
 	 * @return アカウント情報
 	 */
-	List<AccountDto> getAccount(@Param("ID") String id);
+	List<AccountDto> getAccount(@Param("id") String id);
 }
