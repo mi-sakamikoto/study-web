@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:tiles="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org" lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>注册失败</title>
+</head>
+
+<body>
+
+<div class="container">
+
+        <!-- メッセージエリア -->
+        <div th:if="${error_message}">
+            <div class="alert alert-danger">
+                <p id="errMessage" th:text="${error_message}">エラーメッセージ</p>
+            </div>
+        </div>
+
+</div>
+<a th:href="@{/registerAccount}">返回注册</a>
+
+</body>
+</html>

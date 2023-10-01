@@ -70,8 +70,4 @@ public class LoginController {
 	 *
 	 * @return ModelAndView
 	 */
-	@RequestMapping(value = "/register", method = { RequestMethod.GET })
-	public String register() {
-		return "/login/lg001/login";
-	}
 }
