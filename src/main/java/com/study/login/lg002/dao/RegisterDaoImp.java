@@ -16,8 +16,4 @@ public class RegisterDaoImp implements RegisterDao{
 		return registerMapper.insertAccount(id,username,personId,password,idType);
 	}
 
-	/*@Override
-	public List<AccountDto> getAccount(String id) {
-		return registerMapper.getAccount(id);
-	}*/
 }

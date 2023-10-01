@@ -14,9 +14,7 @@
 <body>
 注册成功
 
-<p id="id" th:text="${accountDto.id}">ユーザID</p>
-<p id="name" th:text="${accountDto.name}">ユーザ名</p>
-<a href="../lg001/login.html">返回登录界面</a>
+<a th:href="@{/}">返回登录界面</a>
 
 </body>
 </html>

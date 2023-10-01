@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class AccountDto {
 	/** ユーザID */
-	private String id;
+	private Integer id;
 	/** パスワード */
 	private String password;
 	/** 名前 */
@@ -21,12 +21,12 @@ public class AccountDto {
 	private Date upd_dt;
 
 	/** @return id */
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
 	/** @param id to set */
-	public void setId(String id) {this.id = id;}
+	public void setId(Integer id) {this.id = id;}
 
 	/** @return password */
 	public String getPassword() {

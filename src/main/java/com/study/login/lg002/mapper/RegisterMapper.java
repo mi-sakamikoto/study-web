@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface RegisterMapper {
-	int insertAccount(@Param("id") String id, @Param("name") String name, @Param("personId") String personId, @Param("password") String password, @Param("idType") int idType);
+	int insertAccount(@Param("id") String id, @Param("name") String name, @Param("personId") String personId, @Param("password") String password, @Param("idType") Integer idType);
 
 }

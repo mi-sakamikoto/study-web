@@ -1,7 +1,6 @@
 package com.study.login.lg002.controller;
 
 import com.study.login.lg002.service.RegisterService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
