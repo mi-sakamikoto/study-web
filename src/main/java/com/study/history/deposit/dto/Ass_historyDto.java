@@ -2,11 +2,11 @@ package com.study.history.deposit.dto;
 
 import java.util.Date;
 
-public class HistoryDto {
+public class Ass_historyDto {
 	private String history_seq;
 	private String history_insdt;
 	private String id;
-	private String balance;
+	private String current_balance;
 	private String ceiling;
 	private String ceiled;
 	private String loanamount;
@@ -14,8 +14,8 @@ public class HistoryDto {
 	private Date ins_dt;
 	private String upd_user;
 	private Date udp_dt;
-	private String history_deposit;
-	private String history_withdraw;
+	private String current_deposit;
+	private String current_withdraw;
 
 	public String getHistory_seq() {
 		return history_seq;
@@ -41,12 +41,12 @@ public class HistoryDto {
 		this.id = id;
 	}
 
-	public String getBalance() {
-		return balance;
+	public String getCurrent_balance() {
+		return current_balance;
 	}
 
-	public void setBalance(String balance) {
-		this.balance = balance;
+	public void setCurrent_balance(String current_balance) {
+		this.current_balance = current_balance;
 	}
 
 	public String getCeiling() {
@@ -105,19 +105,19 @@ public class HistoryDto {
 		this.udp_dt = udp_dt;
 	}
 
-	public String getHistory_deposit() {
-		return history_deposit;
+	public String getCurrent_deposit() {
+		return current_deposit;
 	}
 
-	public void setHistory_deposit(String history_deposit) {
-		this.history_deposit = history_deposit;
+	public void setCurrent_deposit(String current_deposit) {
+		this.current_deposit = current_deposit;
 	}
 
-	public String getHistory_withdraw() {
-		return history_withdraw;
+	public String getCurrent_withdraw() {
+		return current_withdraw;
 	}
 
-	public void setHistory_withdraw(String history_withdraw) {
-		this.history_withdraw = history_withdraw;
+	public void setCurrent_withdraw(String current_withdraw) {
+		this.current_withdraw = current_withdraw;
 	}
 }

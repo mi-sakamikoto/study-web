@@ -1,6 +1,7 @@
 package com.study.bank.deposit.controller;
 
 import com.study.bank.deposit.service.DepositService;
+import com.study.history.deposit.service.CurrentDepositService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,9 @@ public class DepositController {
 	@Autowired
 	private DepositService depositService;
 
+	@Autowired
+	private CurrentDepositService currentDepositService;
+
 	@RequestMapping(value = "/depositPage")
 	public String init() {
 		return "/login/lg003/deposit";
@@ -21,8 +25,10 @@ public class DepositController {
 	@RequestMapping("/deposit")
 	public ModelAndView deposit(String id, Double depositNum, HttpSession httpSession){
 		ModelAndView mav = null;
-		if (depositService.deposit((String) httpSession.getAttribute("id"), depositNum) != 0){
+		id = (String) httpSession.getAttribute("id");
+		if (depositService.deposit(id, depositNum) != 0){
 			mav = new ModelAndView("/login/lg003/depositsuccess");
+			currentDepositService.currentDeposit(null, id, depositService.getBalance(id), depositNum);
 		}
 		return mav;
 	}

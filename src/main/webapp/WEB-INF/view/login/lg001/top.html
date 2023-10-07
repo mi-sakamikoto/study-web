@@ -25,17 +25,11 @@
 
         <!--左-->
         <div class="col-md-4 shadow border border-success text-center">
-            <div class="">
-
+            <div class="pt-5">
             </div>
-            <div th:each="map: ${menuMap}" class="text-center">
+            <div th:each="map: ${menuMap}" class="text-center p-2">
                 <a class="text-muted" th:href="${map.value}" th:text="${map.key}"></a>
             </div>
-
-            <div th:each="dao: ${xxList}" class="text-center">
-                <a class="text-muted" yue="${dao.getba}"></a>
-            </div>
-
         </div>
 
         <!--右-->
@@ -49,6 +43,13 @@
                 <p><a th:href="@{/}" class="text-decoration-none text-muted">ログアウト</a></p>
                 <br>
                 <p id="getBalance" class="text-center">残高:<br><span th:text="${balance}"></span></p>
+                <br>
+                <div>
+                    <p class="text-center">最近のレコード:</p>
+                </div>
+                <div th:each="dao: ${xxList}" class="text-center">
+                    <a class="text-muted" yue="${dao.getba}"></a>
+                </div>
             </div>
         </div>
 
