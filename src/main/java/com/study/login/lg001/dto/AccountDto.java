@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class AccountDto {
 	/** ユーザID */
-	private Integer id;
+	private String id;
 	/** パスワード */
 	private String password;
 	/** 名前 */
@@ -21,12 +21,14 @@ public class AccountDto {
 	private Date upd_dt;
 
 	/** @return id */
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
 	/** @param id to set */
-	public void setId(Integer id) {this.id = id;}
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	/** @return password */
 	public String getPassword() {
@@ -49,38 +51,62 @@ public class AccountDto {
 	}
 
 	/** @return personId */
-	public String getPersonId() {return personId;}
+	public String getPersonId() {
+		return personId;
+	}
 
 	/** @param personId to set. */
-	public void setPersonId(String personId) {this.personId = personId;}
+	public void setPersonId(String personId) {
+		this.personId = personId;
+	}
 
 	/** @return idType */
-	public Integer getIdType() {return idType;}
+	public Integer getIdType() {
+		return idType;
+	}
 
 	/** @param idType to set */
-	public void setIdType(Integer idType) {this.idType = idType;}
+	public void setIdType(Integer idType) {
+		this.idType = idType;
+	}
 
 	/** @return ins_user */
-	public String getIns_user() {return ins_user;}
+	public String getIns_user() {
+		return ins_user;
+	}
 
 	/** @param ins_user to set */
-	public void setIns_user(String ins_user) {this.ins_user = ins_user;}
+	public void setIns_user(String ins_user) {
+		this.ins_user = ins_user;
+	}
 
 	/** @return ins_dt */
-	public Date getIns_dt() {return ins_dt;}
+	public Date getIns_dt() {
+		return ins_dt;
+	}
 
 	/** @param ins_dt to set */
-	public void setIns_dt(Date ins_dt) {this.ins_dt = ins_dt;}
+	public void setIns_dt(Date ins_dt) {
+		this.ins_dt = ins_dt;
+	}
 
 	/** @return udp_user */
-	public String getUdp_user() {return udp_user;}
+	public String getUdp_user() {
+		return udp_user;
+	}
 
 	/** @param udp_user to set */
-	public void setUdp_user(String udp_user) {this.udp_user = udp_user;}
+	public void setUdp_user(String udp_user) {
+		this.udp_user = udp_user;
+	}
 
 	/** @return upd_dt */
-	public Date getUpd_dt() {return upd_dt;}
+	public Date getUpd_dt() {
+		return upd_dt;
+	}
 
 	/** @param upd_dt to set */
-	public void setUpd_dt(Date upd_dt) {this.upd_dt = upd_dt;}
+	public void setUpd_dt(Date upd_dt) {
+		this.upd_dt = upd_dt;
+	}
 }

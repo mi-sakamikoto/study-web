@@ -6,22 +6,25 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
-    <title>注册失败</title>
+    <title>登録失败</title>
+    <link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" href="../../../../resources/css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/resources/css/lg001/login.css}" href="../../../../resources/css/lg001/login.css" rel="stylesheet"/>
 </head>
 
 <body>
 
 <div class="container">
+    <h1 class="text-center">登録に失敗しました</h1>
+
 
         <!-- メッセージエリア -->
         <div th:if="${error_message}">
             <div class="alert alert-danger">
                 <p id="errMessage" th:text="${error_message}">エラーメッセージ</p>
             </div>
+            <a th:href="@{/register}">登録に戻る</a>
         </div>
 
 </div>
-<a th:href="@{/registerAccount}">返回注册</a>
-
 </body>
 </html>

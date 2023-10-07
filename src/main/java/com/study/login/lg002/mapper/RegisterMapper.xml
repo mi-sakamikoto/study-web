@@ -6,4 +6,10 @@
         INSERT INTO ACCOUNT (ID, NAME, PERSONID, PASSWORD, IDTYPE)
         VALUES (#{id}, #{name}, #{personId}, #{password}, #{idType})
     </insert>
+
+    <insert id="insertAsset">
+        INSERT INTO ASSET (ID, BALANCE)
+        VALUES (#{id} ,'0.0')
+    </insert>
+
 </mapper>

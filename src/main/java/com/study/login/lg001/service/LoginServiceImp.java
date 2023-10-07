@@ -1,5 +1,6 @@
 package com.study.login.lg001.service;
 
+import com.study.common.Menu;
 import com.study.login.lg001.dao.LoginDao;
 import com.study.login.lg001.dto.AccountDto;
 import org.apache.commons.lang3.StringUtils;
@@ -7,8 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * ログインサービスクラス
@@ -38,5 +38,23 @@ public class LoginServiceImp implements LoginService {
 		}
 
 		return acc;
+	}
+
+	public Map<String, String> getMenu(Integer idType) {
+		Map<String, String> map = new LinkedHashMap<>();
+		switch (idType) {
+			case 0:
+				// TODO 各種メニュー
+				map.put("預金", Menu.DEPOSIT_URL);
+				map.put("金を下ろす",Menu.WITHDRAW_URL);
+				map.put("残高の照会",Menu.GET_BALANCE_URL);
+				break;
+			case 1:
+				break;
+
+		}
+
+
+		return map;
 	}
 }

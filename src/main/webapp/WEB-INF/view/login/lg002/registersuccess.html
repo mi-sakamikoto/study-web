@@ -7,14 +7,20 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>トップ画面</title>
 
-    <script th:src="@{/resources/js/jquery/jquery-3.7.1.js}" src="/resources/js/jquery-3.7.1.js"></script>
-    <script th:src="@{/resources/js/bootstrap/bootstrap.min.js}" src="/resources/js/bootstrap/bootstrap.min.js"></script>
-    <link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" href="/resources/css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" href="../../../../resources/css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/resources/css/lg001/login.css}" href="../../../../resources/css/lg001/login.css" rel="stylesheet"/>
 </head>
 <body>
-注册成功
 
-<a th:href="@{/}">返回登录界面</a>
+<div class="container">
+    <h1 class="text-center">登録に成功しました</h1>
+    <hr>
+
+    <div class="container">
+        <a th:href="@{/}">登録に戻る</a>
+    </div>
+
+</div>
 
 </body>
 </html>

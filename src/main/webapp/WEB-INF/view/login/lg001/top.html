@@ -7,15 +7,58 @@
     <title>トップ画面</title>
 
     <script th:src="@{/resources/js/jquery/jquery-3.7.1.js}" src="../../../../resources/js/jquery-3.7.1.js"></script>
-    <script th:src="@{/resources/js/bootstrap/bootstrap.min.js}" src="../../../../resources/js/bootstrap/bootstrap.min.js"></script>
-    <link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" href="../../../../resources/css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <script th:src="@{/resources/js/bootstrap/bootstrap.min.js}"
+            src="../../../../resources/js/bootstrap/bootstrap.min.js"></script>
+    <link th:href="@{/resources/css/bootstrap/bootstrap.min.css}"
+          href="../../../../resources/css/bootstrap/bootstrap.css" rel="stylesheet"/>
+    <link th:href="@{/resources/css/lg001/login.css}" href="../../../../resources/css/lg001/login.css" rel="stylesheet"/>
 </head>
 <body>
 <div class="container">
-    this is top page.
 
-    <p id="id">ユーザID:<span th:text="${accountDto.id}">123456</span></p>
-    <p id="name">ユーザ名:<span th:text="${accountDto.name}">Tom</span></p>
+    <div class="row lead">
+        <h1 class="text-center">銀行独自システムへようこそ</h1>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <!--左-->
+        <div class="col-md-4 shadow border border-success text-center">
+            <div class="">
+
+            </div>
+            <div th:each="map: ${menuMap}" class="text-center">
+                <a class="text-muted" th:href="${map.value}" th:text="${map.key}"></a>
+            </div>
+
+            <div th:each="dao: ${xxList}" class="text-center">
+                <a class="text-muted" yue="${dao.getba}"></a>
+            </div>
+
+        </div>
+
+        <!--右-->
+        <div class="col-md-8 shadow border border-success">
+            <div class="hr-line-dashed"><!--虚线没给打出来-->
+                <p id="name" class="lead text-center"><span th:text="${accountDto.name}" ></span> 様</p>
+            </div>
+            <div>
+                <p id="id">アカウント:<span th:text="${accountDto.id}"></span></p>
+                <p id="personId">身分証番号:<span th:text="${accountDto.personId}"></span></p>
+                <p><a th:href="@{/}" class="text-decoration-none text-muted">ログアウト</a></p>
+                <br>
+                <p id="getBalance" class="text-center">残高:<br><span th:text="${balance}"></span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <p class="text-center">foot</p>
+    </div>
+
 </div>
+
 </body>
 </html>
