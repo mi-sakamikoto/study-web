@@ -1,8 +1,8 @@
 package com.study.login.lg001.controller;
 
-import com.study.bank.deposit.service.DepositService;
 import com.study.login.lg001.dto.AccountDto;
 import com.study.login.lg001.service.LoginService;
+import com.study.transaction.common.balance.service.BalanceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +32,9 @@ public class LoginController {
 	@Autowired
 	private MessageSource messageSource;
 
+	/** 残高サービス */
 	@Autowired
-	private DepositService depositService;
+	private BalanceService balanceService;
 
 	/**
 	 * 初期画面
@@ -68,7 +69,7 @@ public class LoginController {
 			// メニュー取得
 			mav.addObject("menuMap", loginService.getMenu(accountDto.getIdType()));
 			// 残高取得
-			mav.addObject("balance",depositService.getBalance(accountDto.getId()));
+			mav.addObject("balance",balanceService.getBalance(accountDto.getId()));
 			//最近のレコード取得 TODO
 			mav.addObject("");
 

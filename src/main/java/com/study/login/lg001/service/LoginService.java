@@ -19,8 +19,8 @@ public interface LoginService {
 
 	/**
 	 *  TODO
-	 * @param idType
-	 * @return
+	 * @param idType アカウントタイプ
+	 * @return アカウント情報
 	 */
 	Map<String, String> getMenu(Integer idType);
 }
