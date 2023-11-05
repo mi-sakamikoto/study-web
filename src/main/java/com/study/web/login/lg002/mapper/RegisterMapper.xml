@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.web.login.lg002.mapper.RegisterMapper">
+
+    <insert id="insertAccount">
+        INSERT INTO ACCOUNT (ID, NAME, PERSONID, MAIL, PASSWORD, IDTYPE)
+        VALUES (#{id}, #{name}, #{personId}, #{mail}, #{password}, #{idType})
+    </insert>
+
+    <insert id="insertAsset">
+        INSERT INTO ASSET (ID, BALANCE)
+        VALUES (#{id} ,'0.0')
+    </insert>
+
+</mapper>
